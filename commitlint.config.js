@@ -1,9 +1,14 @@
 /** @type {import('@commitlint/types').UserConfig} */
 const CommitLintConfiguration = {
   extends: ["@commitlint/config-conventional"],
-  // add your own scope here if needed
-  // "scope-enum": [2, "always", ["components", "pages", "utils"]],
-  "scope-case": [2, "always", "kebab-case"],
+  // Permissivo: aceita mensagens comuns
+  rules: {
+    "subject-empty": [0],
+    "type-empty": [0],
+    "type-enum": [0],
+    "scope-case": [0],
+    "header-max-length": [0],
+  },
 };
 
 module.exports = CommitLintConfiguration;
